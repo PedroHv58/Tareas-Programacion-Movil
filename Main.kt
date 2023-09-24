@@ -1,13 +1,21 @@
-//Variables y Tipos de Datos
-
-const val PI = 3.1416f
+//Operadores Practica 3
 fun main() {
-    //NumeroDecimal = Radio
-    val NumeroDecimal = 18.5f
-    val Perimetro= Perimetro(NumeroDecimal)
-    println("El tipo de dato por defecto para un numero decimal es: ${NumeroDecimal::class.simpleName}")
-    println("El perimetro del circulo es : $Perimetro")
+    val x1 = 4
+    val y1 = 3
+    val x2 = -3
+    val y2 = -2
+
+    val m = pendiente(x1, y1, x2, y2)
+
+    println("La pendiente es: $m")
 }
-fun Perimetro(NumeroDecimal:Float): Float{
-    return PI*(2*NumeroDecimal)
+//Funcion para calcular la pendiente
+fun pendiente(x1: Int, y1: Int, x2: Int, y2: Int): Double {
+    // Expresarla ahora con operadores.
+    return (y2 - y1).toDouble() / (x2 - x1).toDouble()
 }
+
+
+
+
+
