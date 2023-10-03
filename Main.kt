@@ -1,21 +1,19 @@
-//Operadores Practica 3
+//Tipo de triangulo -  Hernandez Villagomez Pedro
 fun main() {
-    val x1 = 4
-    val y1 = 3
-    val x2 = -3
-    val y2 = -2
+    val lado_1 = 5
+    val lado_2 = 5
+    val lado_3 = 5
 
-    val m = pendiente(x1, y1, x2, y2)
-
-    println("La pendiente es: $m")
-}
-//Funcion para calcular la pendiente
-fun pendiente(x1: Int, y1: Int, x2: Int, y2: Int): Double {
-    // Expresarla ahora con operadores.
-    return (y2 - y1).toDouble() / (x2 - x1).toDouble()
+    val tipo = TipoDeTriangulo(lado_1, lado_2, lado_3)
+    println("Es un $tipo")
 }
 
-
-
-
-
+fun TipoDeTriangulo(lado_1: Int, lado_2: Int, lado_3: Int): String {
+    if (lado_1 == lado_2 && lado_2 == lado_3) {
+        return "triángulo equilátero"
+    } else if (lado_1 == lado_2 || lado_2 == lado_3 || lado_3 == lado_1) {
+        return "triángulo isósceles"
+    } else {
+        return "triángulo escaleno"
+    }
+}
