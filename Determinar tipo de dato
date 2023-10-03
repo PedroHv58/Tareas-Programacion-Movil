@@ -1,0 +1,15 @@
+//Determinar tipo de dato - Hernandez Villagomez Pedro
+fun determinarTipoDato(input: Any) {
+    when (input) {
+        is Double -> println("El tipo de dato es un número decimal.")
+        is Boolean -> println("El tipo de dato es un tipo de dato booleano")
+        is String -> println("El tipo de dato es una cadena de texto.")
+        is Int -> println("El tipo de dato es un número entero.")
+        else -> println("El tipo de dato es un tipo de dato desconocido")
+
+    }
+}
+fun main() {
+    val Input: Any = 10.89
+    determinarTipoDato(Input)
+}
